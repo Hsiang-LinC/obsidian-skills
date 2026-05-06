@@ -1,6 +1,6 @@
 ---
 name: knowledge-refactor
-description: Use when processing accumulated Obsidian inbox captures in Claude Knowledge vault — promotes raw captures to permanent typed notes and updates MOC wikilinks. Trigger when user asks to refactor, digest, or process inbox, or proactively suggest when ≥5 unprocessed captures exist.
+description: Use when user asks to refactor, digest, or process Obsidian inbox. Also invoke proactively during any vault session when Claude Knowledge/Inbox/ contains ≥5 files without a *Refactored:* marker.
 ---
 
 # Knowledge Refactor
