@@ -104,3 +104,21 @@ obsidian dev:mobile on
 ```
 
 Run `obsidian help` to see additional developer commands including CDP and debugger controls.
+
+## Knowledge Inbox Check
+
+When starting any vault session, check for unprocessed inbox captures:
+
+```bash
+obsidian files folder="Claude Knowledge/Inbox"
+```
+
+For each file returned, read it and check for a `*Refactored:*` marker at the bottom. Files without this marker are unprocessed.
+
+If **≥5 unprocessed captures** exist across inbox files, proactively suggest:
+
+> "Inbox has N unprocessed captures — want to run `/obsidian:knowledge-refactor`?"
+
+Do not interrupt mid-task. Suggest at session start or when user wraps up a topic.
+
+Skip this check if `Claude Knowledge/Inbox/` does not exist in the vault.
