@@ -2,19 +2,30 @@ Agent Skills for use with Obsidian.
 
 These skills follow the [Agent Skills specification](https://agentskills.io/specification) so they can be used by any skills-compatible agent, including Claude Code and Codex CLI.
 
+This fork also includes a Codex plugin marketplace wrapper in `.agents/plugins/marketplace.json` and `plugins/obsidian/.codex-plugin/plugin.json`.
+
 ## Installation
 
 ### Marketplace
 
+#### Claude Code
+
 ```
-/plugin marketplace add kepano/obsidian-skills
+/plugin marketplace add Hsiang-LinC/obsidian-skills
 /plugin install obsidian@obsidian-skills
+```
+
+#### Codex
+
+```sh
+codex plugin marketplace add Hsiang-LinC/obsidian-skills
+codex plugin add obsidian@obsidian-skills
 ```
 
 ### npx skills
 
 ```
-npx skills add git@github.com:kepano/obsidian-skills.git
+npx skills add git@github.com:Hsiang-LinC/obsidian-skills.git
 ```
 
 ### Manually
@@ -25,14 +36,21 @@ Add the contents of this repo to a `/.claude` folder in the root of your Obsidia
 
 #### Codex CLI
 
-Copy the `skills/` directory into your Codex skills path (typically `~/.codex/skills`). See the [Agent Skills specification](https://agentskills.io/specification) for the standard skill format.
+Preferred: install the Codex plugin from the marketplace:
+
+```sh
+codex plugin marketplace add Hsiang-LinC/obsidian-skills
+codex plugin add obsidian@obsidian-skills
+```
+
+Manual alternative: copy the `skills/` directory into your Codex skills path (typically `~/.codex/skills`). See the [Agent Skills specification](https://agentskills.io/specification) for the standard skill format.
 
 #### OpenCode
 
 Clone the entire repo into the OpenCode skills directory (`~/.opencode/skills/`):
 
 ```sh
-git clone https://github.com/kepano/obsidian-skills.git ~/.opencode/skills/obsidian-skills
+git clone https://github.com/Hsiang-LinC/obsidian-skills.git ~/.opencode/skills/obsidian-skills
 ```
 
 Do not copy only the inner `skills/` folder — clone the full repo so the directory structure is `~/.opencode/skills/obsidian-skills/skills/<skill-name>/SKILL.md`.
